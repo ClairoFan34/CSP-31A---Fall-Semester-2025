@@ -17,7 +17,7 @@ int main()
     char passWord[20];
 
     cout << "Enter a password consisting of exactly 4 "
-         << "letters and 6 digits:" << endl;
+         << "letters and 6 digits and all lowercase:" << endl;
     cin.getline(passWord, 20);
 
     if (testPassWord(passWord))
