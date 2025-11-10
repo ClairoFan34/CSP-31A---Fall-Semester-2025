@@ -16,8 +16,8 @@ int main()
 {
     char passWord[20];
 
-    cout << "Enter a password consisting of exactly 5 "
-         << "letters and 3 digits:" << endl;
+    cout << "Enter a password consisting of exactly 4 "
+         << "letters and 6 digits:" << endl;
     cin.getline(passWord, 20);
 
     if (testPassWord(passWord))
@@ -57,10 +57,15 @@ bool testPassWord(char custPass[])
     numLetters = countLetters(custPass);
     numDigits = countDigits(custPass);
 
-    if (numLetters == 5 && numDigits == 3 && length == 8)
-        return true;
-    else
+     if (numLetters != 4 || numDigits != 6 || length != 10)
         return false;
+
+    for (int i = 0 ; custPass[i] != '\0'; i++) {
+        if (isalpha(custPass[i]) && !islower(custPass[i]))
+            return false;
+    }
+
+    return true;
 }
 
 // the next 2 functions are from Sample Program 10.5
