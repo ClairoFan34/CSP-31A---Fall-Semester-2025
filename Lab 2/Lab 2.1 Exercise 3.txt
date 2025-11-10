@@ -1,0 +1,16 @@
+// This program will write the name, address and telephone
+// number of the programmer.
+// Angel Perez
+#include <iostream>
+using namespace std;
+int main()
+{
+cout << "************" << endl;
+cout << "       Programmer: Angel Perez" << endl;
+cout << "                   4031 Villalobo Pl" << endl;
+cout << "                   Stockton, CA 95206"<< endl;
+cout << endl;
+cout << "        Telephone: 209-276-8754" << endl; 
+cout << "************" << endl;
+return 0;
+}

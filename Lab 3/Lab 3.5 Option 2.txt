@@ -1,0 +1,28 @@
+// Angel Perez
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main()
+{
+    float chair1;
+    float chair2;
+    float chair3;
+    float totalBill;
+    
+    cout << "Style              Price per Chair" << endl;
+    cout << "American Colonial  $ 85.00" << endl;
+    cout << "Modern             $ 57.50" << endl;
+    cout << "French Classical   $ 127.75" << endl;
+    cout << "Please input the number of American Colonial chairs sold:" << endl;
+    cin >>  chair1;
+    cout << "Please input the number of Modern chairs sold:" << endl;
+    cin >>  chair2;
+    cout << "Please input the number of French Classical chairs sold:" << endl;
+    cin >>  chair3;
+    cout << "The total sales of American Colonial chairs: $" << fixed << setprecision(2) << chair1  * 85.00 << endl;
+    cout << "The total sales of Modern chairs: $" << fixed << setprecision(2) << chair2 * 57.50 << endl;
+    cout << "The total sales of French Classical: $" << fixed << setprecision(2) << chair3 * 127.75 << endl;
+    totalBill = (chair1  * 85.00 ) + (chair2 * 57.50) + (chair3 * 127.75);
+    cout << "The total sales of all chairs $" << fixed << setprecision(2) << totalBill;
+    return 0;
+}

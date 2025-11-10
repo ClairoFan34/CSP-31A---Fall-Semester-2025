@@ -1,0 +1,2 @@
+Exercise 3: You can't change the choice of favorite soda because it is a constant 
+Exercise 4: It is possible to change the choice of favorite snack because it is a variable

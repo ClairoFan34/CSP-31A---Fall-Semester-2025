@@ -1,0 +1,2 @@
+Exercise 4: The number 4.5 is outputted
+Exercise 5: I do feel I am getting a valid output as the numbers inputted are being divided by 2

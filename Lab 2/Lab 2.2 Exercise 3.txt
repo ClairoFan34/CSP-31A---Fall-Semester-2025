@@ -1,0 +1,4 @@
+The circumference of the circle is 33
+The area of the circle is 91.5624
+
+Because the data type for the circumference was changed to integer, decimals are no longer considers or displayed

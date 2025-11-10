@@ -1,0 +1,2 @@
+Exercise 3: It outputs the numbers 9 and 9. The numbers are being switched but it doesn't seem like it because they are the same
+Exercise 4: I feel I am getting a valid output because the numbers are being switched

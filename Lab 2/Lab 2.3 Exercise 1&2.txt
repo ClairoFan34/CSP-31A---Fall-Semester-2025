@@ -1,0 +1,17 @@
+// This program will output the perimeter and area
+// of the rectangle with given length and width.
+// Angel Perez
+#include <iostream>
+using namespace std;
+const int length = 8;
+const int width = 3;
+int main()
+{
+int area;
+int perimeter;
+area = length * width;
+perimeter = length * 2 + width * 2;
+cout << "The area of the rectangle is " << area << endl;
+cout << "The perimeter of the rectangle is " << perimeter;
+return 0;
+}

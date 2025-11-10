@@ -1,0 +1,17 @@
+// This program will write the name, address and telephone
+// number of the programmer.
+// Angel Perez
+#include <iostream>
+using namespace std;
+int main()
+{
+// Fill in this space to write your first and last name
+cout << "Angel Perez" << endl;
+// Fill in this space to write your address (on new line)
+cout << "4031 Villalobos Pl" << endl;
+// Fill in this space to write you city, state and zip (on new line)
+cout << "Stockton, California 95206" << endl;
+// Fill in this space to write your telephone number (on new line)
+cout << "2092768754" << endl;
+return 0;
+}

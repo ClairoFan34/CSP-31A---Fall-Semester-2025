@@ -1,0 +1,14 @@
+// This program will convert kilometers to miles
+// Angel Perez
+#include <iostream>
+using namespace std;
+int main()
+{
+float kilo;
+float miles;
+cout << "Enter amount of kilometers:" << endl;
+cin >> kilo;
+miles = kilo * 0.621;
+cout << kilo << " kilometers is the same as " << miles << " miles";
+return 0;
+}
