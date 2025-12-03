@@ -12,62 +12,64 @@
 #include <iomanip>
 using namespace std;
 
-const int MAX_LENGTH = 50; // MAX_LENGTH contains the maximum length of our list
+const int MAX_LENGTH = 50;
 
-class FloatList // Declares a class that contains an array of floating point numbers
-{
+class FloatList {
 public:
-    void getList(ifstream& infile);        // Member function that gets data from a file
-    void printList() const;         // Member function that prints data from that file to the screen.
-    FloatList();                    // constructor that sets length to 0.
-    ~FloatList();                   // destructor
+    void getList(ifstream&);
+    void printList() const;
+    void printAverage() const;
+    FloatList();
+    ~FloatList();
 private:
-    int length;                     // Holds the number of elements in the arrays
-    int itemNumbers[MAX_LENGTH];    // The array of item numbers
-    int itemsInStock[MAX_LENGTH];   // The array of stock quantities
+    int length;
+    float values[MAX_LENGTH];
 };
 
-int main()
-{
-    ifstream tempData;              // Defines a data file
-    // Fill in the code to define an object called list of the class FloatList
+int main() {
+    ifstream tempData;
     FloatList list;
+
     cout << fixed << showpoint;
     cout << setprecision(2);
+
     tempData.open("temperatures.txt");
-    // Fill in the code that calls the getList function.
+
     list.getList(tempData);
-    // Fill in the code that calls the printList function.
     list.printList();
+    list.printAverage();
+
     return 0;
 }
 
 FloatList::FloatList() {
-    // Fill in the code to complete this constructor that
-    // sets the private data member length to 0
     length = 0;
 }
 
 FloatList::~FloatList() {
-    // Simple destructor
 }
 
-// Fill in the entire code for the getList function
-// The getList function reads the data values from a data file
-// into the values array of the class FloatList
 void FloatList::getList(ifstream& infile) {
-    int itemNum, inStock;
+    float num;
     length = 0;
 
-    while (infile >> itemNum >> inStock && length < MAX_LENGTH) {
-        itemNumbers[length] = itemNum;
-        itemsInStock[length] = inStock;
+    while (infile >> num && length < MAX_LENGTH) {
+        values[length] = num;
         length++;
     }
 }
 
 void FloatList::printList() const {
     for (int i = 0; i < length; i++) {
-        cout << "Item number " << itemNumbers[i] << " has " << itemsInStock[i] << " items in stock" << endl;
+        cout << values[i] << endl;
     }
+}
+
+void FloatList::printAverage() const {
+    float sum = 0;
+    for (int i = 0; i < length; i++)
+        sum += values[i];
+
+    float avg = sum / length;
+    cout << "The average temperature is " << avg << endl;
 }
