@@ -3,8 +3,7 @@ using namespace std;
 
 int main(){
 
-    int a = 23;
-    int* pointer = &a;
-    cout << "Pointer is: " << pointer << endl;
+    int myNum[2] = {1,2};
+    cout << sizeof(myNum);
     return 0;
 }
